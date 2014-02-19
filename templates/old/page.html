@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ p.title }}{% endblock %}
+
+{% block content %}
+    <div class="kroshki">
+        <ul>
+            <li>
+                <a href="/">Главная</a>
+            </li>
+            <li>
+                > {{ p.title }}
+            </li>
+        </ul>
+    </div><!-- kroshki -->
+    
+    <div class="content">
+        <div class="content_in">
+            <div class="left_100">
+                <h1>
+                    {{ p.title }}
+                </h1>
+                {{ p.content|safe }}
+            </div>
+            
+        </div>
+    </div><!-- content -->
+{% endblock %}

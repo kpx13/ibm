@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+
+{% block title %}О компании{% endblock %}
+
+{% block content %}
+    <div class="kroshki">
+        <ul>
+            <li>
+                <a href="/">Главная</a>
+            </li>
+            <li>
+                > О Компании
+            </li>
+        </ul>
+    </div><!-- kroshki -->
+    
+    <div class="content">
+        <div class="content_in">
+            <div class="left">
+                <h1>
+                    Грузоперевозки из Китая
+                </h1>
+                <h2>
+                    о компании
+                </h2>
+                {{ content|safe }}
+                
+                <h1>
+                    Стратегия компании
+                </h1>
+                <h2>
+                    то что в наших головах
+                </h2>
+                    <ul class="str">
+                        <li>
+                            <span class="nom">1</span>
+                            <div class="text">Экспедирование груза осуществляется по схеме «от двери до двери».</div>
+                        </li>
+                        <li>
+                            <span class="nom">2</span>
+                            <div class="text"><p>Экспедирование груза осуществляется по схеме.</p></div>
+                                
+                        </li>
+                        <li>
+                            <span class="nom">3</span>
+                            <div class="text"><p>Экспедирование груза осуществляется по схеме.</p></div>
+                            
+                        </li>
+                        <li>
+                            <span class="nom">4</span>
+                            <div class="text"><p>Экспедирование груза осуществляется по схеме.</p></div>
+                            
+                        </li>
+                        <li>
+                            <span class="nom">5</span>
+                            <div class="text"><p>Экспедирование груза осуществляется по схеме.</p></div>
+                            
+                        </li>
+                    </ul>
+            </div>
+            <div class="right">
+                <div class="sotrudnchat">
+                    <h1>Условия сотрудничества</h1>
+                    <h2>как с нами работать?</h2>
+                    <ol>
+                        <li>
+                            <strong>Экспедирование груза</strong> осуществляется по схеме «от двери до двери».
+                        </li>
+                        <li>
+                            Предлагает своим клиентам <strong>широкий спектр решений</strong> по оперативной доставке любых грузов.
+                        </li>
+                        <li>
+                            За время своего существования компания наработала <strong>большой опыт</strong> в решении вопросов логистики.
+                        </li>
+                        <li>
+                            Существенное преимущество компании заключается в глубоком <strong>понимании местных особенностей</strong> и четкой работе специалистов компании.
+                        </li>
+                        <li>
+                            Опираясь на свой опыт, мы предлагаем <strong>индивидуальные решения</strong> по перевозке, работающие в отрасли. 
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div><!-- content -->
+    <div class="clear"></div>
+    <div class="history">
+        <div class="history_in">
+            <h1>Наша история и развитие компании</h1>
+            <h2>узнай всю правду о нас</h2>
+            <div class="history_why">
+                <h1>Почему мы?</h1>
+                <div class="w1">{{ field_1 }}<span class="small">доставлен груз<br /> до пункта<br /> назначения</span></div>
+                <div class="w2">{{ field_2 }}<span class="small">довольных<br />клиентов</span></div>
+                <div class="w3">{{ field_3 }}<span class="small">звонка в день</span></div>
+                <div class="w4">{{ field_4 }}<span class="small">процента закупок<br />за рубежом</span></div>
+            </div>
+            <div class="history_line">
+                
+                <span class="l1">Открытие нашей компании. 23 февраля была регистрации первого названия нашей фирмы.</span>
+                <span class="l2">Наш штат сотрудников составлял 5 человек.</span>
+                <span class="l3">Мы развиваемся, штат увеличлия на 4 отличных сотрудника!</span>
+                <span class="l4">Сейчас мы работаем с Китаем и развиваем новые пути пбыстрой поставки.</span>
+                <span class="l5">У нас крупные клиенты такие как... . Наш штат состваляет 57 человек</span>
+                <span class="l6">Мы разваиваемся, налаживаем отношения с Германией, поставки отправляются.</span>
+            </div>
+        </div>
+    </div><!-- history -->
+    <div class="content_down">
+        <div class="left">
+            <div class="photoalbom">
+                <h1>Фотоальбом</h1>
+                <h2>как мы работаем</h2>
+                    <a href="#"><img src="/static/images/photo1.jpg" alt="" /></a>
+                    <a href="#"><img src="/static/images/photo2.jpg" alt="" /></a>
+                    <a href="#"><img src="/static/images/photo3.jpg" alt="" /></a>
+                    <a href="#"><img src="/static/images/photo4.jpg" alt="" /></a>
+                    <a href="#"><img src="/static/images/photo5.jpg" alt="" /></a>
+            </div>
+        </div>
+        <div class="right">
+            <div class="news">
+                <h1>Новости компании</h1>
+                <h2>Последняя новость</h2>
+                <ul>
+                    <li>
+                        <a href="#">12 августа 2013</a>
+                        <strong>Экспедирование груза</strong> осуществляется по схеме «от двери до двери». 
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

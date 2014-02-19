@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}О компании{% endblock %}
+
+{% block content %}
+    <div class="kroshki">
+        <ul>
+            <li>
+                <a href="/">Главная</a>
+            </li>
+            <li>
+                > Услуги
+            </li>
+        </ul>
+    </div><!-- kroshki -->
+    
+    <div class="content">
+        <div class="content_in">
+            <div class="left">
+                <h1>
+                    Услуги
+                </h1>
+                <h2>
+                    услуги нашей компании
+                </h2>
+                    {{ left|safe }}
+            </div>
+            <div class="right">
+                <div class="sotrudnchat">
+                    <h1>Условия сотрудничества</h1>
+                    <h2>как с нами работать?</h2>
+                    {{ right|safe }}
+                </div>
+            </div>
+        </div>
+    </div><!-- content -->
+{% endblock %}

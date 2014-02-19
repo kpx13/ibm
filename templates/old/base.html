@@ -1,0 +1,165 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Forward Express | {% block title %}{% endblock %}</title>
+        <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+        {% block head %}
+        {% endblock %}
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="header">
+                <div class="logo">
+                    <a href="/"><img src="/static/images/logo.png" alt="Forward Express" /></a>
+                </div>
+
+                <div class="lang">
+                    <form method="POST" action='/i18n/setlang/'>
+                        {% csrf_token %}
+                        <button type = 'submit' name="language" value="zh-cn" class='lang'><img src="/static/images/ch.png" alt="Chine" /> Ch</button>
+                        <br />
+                        <button type = 'submit' name="language" value="en" class='lang'><img src="/static/images/us.png" alt="USA" /> Eng</button>
+                        <br />
+                        <button type = 'submit' name="language" value="ru" class='lang'><img src="/static/images/ru.png" alt="Russian" />Рус</button>
+                    </form>
+                </div>
+
+                <div class="clock">
+                    <ul>
+                        <li>
+                            <div class="mos_cl">
+                                <h5>
+                                    Москва
+                                </h5>
+                                <div class="clock_in">
+                                    <span>1</span>
+                                    <span>2</span>
+                                    <span>:</span>
+                                    <span>3</span>
+                                    <span>5</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="vlad_cl">
+                                <h5>
+                                    Владивосток
+                                </h5>
+                                <div class="clock_in">
+                                    <span>1</span>
+                                    <span>2</span>
+                                    <span>:</span>
+                                    <span>3</span>
+                                    <span>5</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="guan_cl">
+                                <h5>
+                                    Гуанчжоу
+                                </h5>
+                                <div class="clock_in">
+                                    <span>1</span>
+                                    <span>2</span>
+                                    <span>:</span>
+                                    <span>3</span>
+                                    <span>5</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- header -->
+            
+            <div class="main_menu">
+                <div class="menu_l_bg"></div>
+                <div class="menu_r_bg"></div>
+                <ul>
+                    <li>
+                        <a href="/">{% trans 'Главная' %}</a>
+                    </li>
+                    <li>
+                        <a href="/about/">{% trans 'О компании' %}</a>
+                    </li>
+                    <li>
+                        <a href="/services/">{% trans 'Услуги' %}</a>
+                    </li>
+                    <li>
+                        <a href="/contacts/">{% trans 'Контакты' %}</a>
+                    </li>
+                    <li>
+                        <a href="/order/">{% trans 'Заказать сейчас' %}</a>
+                    </li>
+                </ul>
+            </div><!-- main_menu -->
+            
+            
+            {% block content %}
+            {% endblock %}
+            
+            <div class="clear"></div>
+            <div class="footer">
+                <ul class="footer_menu">
+                    <li>
+                        <a href="/">Главная</a>
+                    </li>
+                    <li>
+                        <a href="/about/">О компании</a>
+                    </li>
+                    <li>
+                        <a href="/services/">Услуги и решения</a>
+                    </li>
+                    <li>
+                        <a href="/contacts/">Контакты</a>
+                    </li>
+                    <li>
+                        <a href="/order/">Заказать сейчас</a>
+                    </li>
+                </ul>
+                <div class="footer_in">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="copy">
+                                        ® 2013 FORWARDEXPRESS
+                                        <br />
+                                        © Все права защищены
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="phone">
+                                        +7 (495) 514-81-77
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="footer_text">
+                                        Мы компания, которая на протяжении уже более 5 лет профессионально и успешно обеспечивает поставку тысяч различных товаров из Китая и Юго-Восточной Азии в любую точку России, СНГ и мира.
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="soc">
+                                        <ul>
+                                            <li>
+                                                <a href="#"><img src="/static/images/facebook.png" alt="" /></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><img src="/static/images/vkontakte.png" alt="" /></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><img src="/static/images/skype.png" alt="" /></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div><!-- footer -->
+        </div><!-- wrapper -->
+    </body>
+</html>

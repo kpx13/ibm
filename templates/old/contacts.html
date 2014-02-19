@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %}Контакты{% endblock %}
+
+{% block head %}
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.placeholder.min.js"></script>
+    <script>
+        jQuery('input[placeholder], textarea[placeholder]').placeholder();
+    </script>
+{% endblock %}
+
+{% block content %}
+    <div class="kroshki">
+        <ul>
+            <li>
+                <a href="/">Главная</a>
+            </li>
+            <li>
+                > Контакты
+            </li>
+        </ul>
+    </div><!-- kroshki -->
+
+    <div class="content">
+        <div class="content_in">
+            <div class="left">
+                <h1>
+                    Контакты
+                </h1>
+                <h2>
+                    Контактная информация
+                </h2>
+                    <div class="left_in">
+                        {{ content|safe }}
+                    </div>
+            </div>
+            <div class="right">
+                <form action="" method='POST'>
+                    {% csrf_token %}
+                    <h1>Форма обратной связи</h1>
+                    {% if feedback_ok %}
+                        <h2 class='form_ok'>Спасибо! <br />Ваше сообщение отправлено.</h2><br />
+                    {% else %}
+                        {{ form }}
+                        <button type="submit" name="submit">Отправить</button>
+                    {% endif %}
+                </form>
+                <p>
+                    заполните форму обратного звонка и наш  менджер свяжеться с Вами в удобное для Вас время.
+                </p>
+            </div>
+        </div>
+    </div><!-- content -->
+{% endblock %}

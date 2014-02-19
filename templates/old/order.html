@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block title %}Заказать{% endblock %}
+
+{% block head %}
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+
+{% endblock %}
+
+{% block content %}
+    <div class="kroshki">
+        <ul>
+            <li>
+                <a href="/">Главная</a>
+            </li>
+            <li>
+                > Заказать
+            </li>
+        </ul>
+    </div><!-- kroshki -->
+    
+    <div class="content">
+        <div class="content_in">
+            <div class="left">
+                <h1>
+                    Заказать сейчас
+                </h1>
+                <h2>
+                    форма заявки
+                </h2>
+                    <div class="left_in">
+                        <form action="" method='POST' enctype="multipart/form-data">
+                            {% csrf_token %}
+                            
+                            {% if feedback_ok %}
+                                <h2 class='form_ok'>Спасибо! <br />Ваша заявка отправлена.</h2><br />
+                            {% endif %}
+                            
+                            {% if form.name.errors %}<p class='form_error'>{{ form.name.errors.0 }}</p>{% endif %}
+                            <input type="text" name="name" class="w_100" placeholder="Наименование компании" value="{% if form.name.value %}{{ form.name.value }}{% endif %}" />
+                            
+                            {% if form.country.errors %}<p class='form_error'>{{ form.country.errors.0 }}</p>{% endif %}
+                            <input type="text" name="country" class="w_50" placeholder="Страна" value="{% if form.country.value %}{{ form.country.value }}{% endif %}" />
+                            
+                            {% if form.city.errors %}<p class='form_error'>{{ form.city.errors.0 }}</p>{% endif %}
+                            <input type="text" name="city" class="w_50" placeholder="Город" value="{% if form.city.value %}{{ form.city.value }}{% endif %}" />
+                            
+                            {% if form.desc.errors %}<p class='form_error'>{{ form.desc.errors.0 }}</p>{% endif %}
+                            <textarea placeholder="Описание товара" name="desc" >{% if form.desc.value %}{{ form.desc.value }}{% endif %}</textarea>
+                            
+                            {% if form.contact.errors %}<p class='form_error'>{{ form.contact.errors.0 }}</p>{% endif %}
+                            <input type="text" name="contact" class="w_100" placeholder="Контактное лицо" value="{% if form.contact.value %}{{ form.contact.value }}{% endif %}"/>
+                            
+                            {% if form.phone.errors %}<p class='form_error'>{{ form.phone.errors.0 }}</p>{% endif %}
+                            <input type="text" name="phone" class="w_50" placeholder="Телефон" value="{% if form.phone.value %}{{ form.phone.value }}{% endif %}" />
+                            
+                            {% if form.email.errors %}<p class='form_error'>{{ form.email.errors.0 }}</p>{% endif %}
+                            <input type="text" name="email" class="w_50" placeholder="E-mail" value="{% if form.email.value %}{{ form.email.value }}{% endif %}" />
+                            
+                            <div class="upload"> Загрузить файл 
+                                {{ form.file }}
+                            </div>
+                            
+                            <span>* Вы можете приложить к запросу файл с описанием заказа, Например: Упаковочный лист, Инвойс или требование к грузу и поставке</span>
+                            <button type="submit" name="submit">Отправить</button>
+                        </form>
+                    </div>
+            </div>
+            <div class="right">
+                
+                <span class="m_60">
+                    Заполните форму обратного звонка и наш  менджер свяжется с Вами в удобное для Вас время.
+                </span>
+            </div>
+        </div>
+    </div><!-- content -->
+{% endblock %}

@@ -1,0 +1,404 @@
+{% load i18n %}
+    
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js ie lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js ie ie7"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js ie ie8"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8"/>
+        <title>ИБМ3 | {% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="/static/css/main.css">
+        <script src="/static/js/modernizr-2.6.2.min.js"></script>
+        <script src="/static/js/jquery.min.js"></script>
+        <script src="/static/js/script.js"></script>
+        {% block head %}
+        {% endblock %}
+    </head>
+
+    <body>
+        <!-- .root -->
+        <div class="root">
+        <!-- header -->
+        <header>
+            <!-- .head-in -->
+            <div class="head-in">
+                <div class="logo">
+                    <a href="#">
+                        <img src="/static/i/logo.png" alt="" width="118" height="117">
+                    </a>
+                </div>
+                <!-- .site-info -->
+                <div class="site-info">
+                    <div class="site-name">{% trans 'Кафедра "Промышленная логистика"' %}</div>
+                    <ul class="slogan">
+                        <li>{% trans 'Научно-учебный комплекс "Инженерный бизнес и менеджмент"' %}</li>
+                        <li>{% trans 'Московский Государственный технический университет им. Н.Э. Баумана' %}</li>
+                    </ul>
+                </div>
+                <!--// .site-info -->
+                <!-- .nav -->
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#">{% trans 'Сайт МГТУ' %}</a></li>
+                        <li><a href="#">{% trans 'Карта сайта' %}</a></li>
+                        <li><a href="#">{% trans 'Поиск' %}</a></li>
+                        <li><a href="#">{% trans 'Контакты' %}</a></li>
+                    </ul>
+                </nav>
+                <!--// .nav -->
+                 
+                <ul class="lang">
+                    <li><a href="#" id='set_lang_ru'>Рус</a></li>
+                    <li>|</li>
+                    <li><a href="#" id='set_lang_en'>Eng</a></li>
+                </ul>
+                <i class="emblem"></i>
+                <i class="header-pic"></i>
+            </div>
+            <!--// .head-in -->
+            <!-- .menu -->
+            <nav class="menu">
+                {% include 'top_menu.html' %}
+            </nav>
+            <!--// .menu -->
+        </header>
+        <!--// header -->
+        <!-- .main -->
+        <div class="main">
+        <!-- .content -->
+        <div class="content">
+            <!-- .welcome -->
+            <section class="welcome with-separator">
+                <div class="img">
+                    <img src="/static/i/welcome.jpg" alt="" width="164" height="198">
+                </div>
+                <div class="txt">
+                    <h1>Добро пожаловать!</h1>
+
+                    <p>На нашем факультете Вы имеете уникальную возможность получить комбинированное образование: на первых
+                        годах обучения изучить основные технические дисциплины, а на старших курсах получить знания о
+                        экономических и управленческих науках (направление инноватика). Или же сразу пробовать себя в экономике
+                        и менеджемнте (напрвление экономика и менеджемнт).</p>
+
+                    <div class="more"><a href="#">Подробнее</a></div>
+                </div>
+            </section>
+            <!--// .welcome -->
+            <!-- .news-block -->
+            <section class="news-block with-separator box">
+                <h1>Новости</h1>
+                <!-- .calendar -->
+                <div class="calendar">
+                    <div class="prev" style="display:none;">&lt;</div>
+                    <div class="next">&gt;</div>
+                    <!-- .month -->
+                    <ul class="month">
+                        <li>Январь</li>
+                        <li class="active">Февраль</li>
+                        <li>Март</li>
+                        <li>Апрель</li>
+                        <li>Май</li>
+                        <li>Июнь</li>
+                        <li>Июль</li>
+                        <li>Август</li>
+                        <li>Сентябрь</li>
+                        <li>Октябрь</li>
+                        <li>Ноябрь</li>
+                        <li>Декабрь</li>
+                    </ul>
+                    <!--// .month -->
+                    <!-- .days -->
+                    <ul class="days">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                        <li>8</li>
+                        <li>9</li>
+                        <li>10</li>
+                        <li>11</li>
+                        <li>12</li>
+                        <li>13</li>
+                        <li>14</li>
+                        <li>15</li>
+                        <li>16</li>
+                        <li>17</li>
+                        <li>18</li>
+                        <li>19</li>
+                        <li>20</li>
+                        <li>21</li>
+                        <li>22</li>
+                        <li>23</li>
+                        <li>24</li>
+                        <li>25</li>
+                        <li>26</li>
+                        <li>27</li>
+                        <li>28</li>
+                        <li>29</li>
+                        <li>30</li>
+                        <li>31</li>
+                    </ul>
+                    <!--// .days -->
+                    <!-- .news-list -->
+                    <ul class="news-list">
+                        <li>
+                            <div class="img">
+                                <a href="#"><img src="/static/i/news-pic1.jpg"
+                                                alt="На нашем факультете Вы имеете уникальную возможность получить" width="198"
+                                                height="83"></a>
+                            </div>
+                            <div class="date">16 января 2014</div>
+                            <div class="title"><a href="#">На нашем факультете Вы имеете уникальную возможность получить</a>
+                            </div>
+                            <div class="txt">комбинированное образование: на первых годах обучения изучить основные технические
+                                дисциплины, а на старших курсах...
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img">
+                                <a href="#"><img src="/static/i/news-pic2.jpg"
+                                                alt="На нашем факультете Вы имеете уникальную возможность получить" width="198"
+                                                height="83"></a>
+                            </div>
+                            <div class="date">16 января 2014</div>
+                            <div class="title"><a href="#">На нашем факультете Вы имеете уникальную возможность получить</a>
+                            </div>
+                            <div class="txt">комбинированное образование: на первых годах обучения изучить основные технические
+                                дисциплины, а на старших курсах...
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img">
+                                <a href="#"><img src="/static/i/news-pic3.jpg"
+                                                alt="На нашем факультете Вы имеете уникальную возможность получить" width="198"
+                                                height="83"></a>
+                            </div>
+                            <div class="date">16 января 2014</div>
+                            <div class="title"><a href="#">На нашем факультете Вы имеете уникальную возможность получить</a>
+                            </div>
+                            <div class="txt">комбинированное образование: на первых годах обучения изучить основные технические
+                                дисциплины, а на старших курсах...
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img">
+                                <a href="#"><img src="/static/i/news-pic1.jpg"
+                                                alt="На нашем факультете Вы имеете уникальную возможность получить" width="198"
+                                                height="83"></a>
+                            </div>
+                            <div class="date">16 января 2014</div>
+                            <div class="title"><a href="#">На нашем факультете Вы имеете уникальную возможность получить</a>
+                            </div>
+                            <div class="txt">комбинированное образование: на первых годах обучения изучить основные технические
+                                дисциплины, а на старших курсах...
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img">
+                                <a href="#"><img src="/static/i/news-pic2.jpg"
+                                                alt="На нашем факультете Вы имеете уникальную возможность получить" width="198"
+                                                height="83"></a>
+                            </div>
+                            <div class="date">16 января 2014</div>
+                            <div class="title"><a href="#">На нашем факультете Вы имеете уникальную возможность получить</a>
+                            </div>
+                            <div class="txt">комбинированное образование: на первых годах обучения изучить основные технические
+                                дисциплины, а на старших курсах...
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img">
+                                <a href="#"><img src="/static/i/news-pic3.jpg"
+                                                alt="На нашем факультете Вы имеете уникальную возможность получить" width="198"
+                                                height="83"></a>
+                            </div>
+                            <div class="date">16 января 2014</div>
+                            <div class="title"><a href="#">На нашем факультете Вы имеете уникальную возможность получить</a>
+                            </div>
+                            <div class="txt">комбинированное образование: на первых годах обучения изучить основные технические
+                                дисциплины, а на старших курсах...
+                            </div>
+                        </li>
+                    </ul>
+                    <!--// .news-list -->
+                </div>
+                <!--// .calendar -->
+            </section>
+            <!--// .news-block -->
+            <!-- .photoreport -->
+            <section class="photoreport with-separator box">
+                <!-- .pager -->
+                <div class="pager">
+                    <!-- .pages -->
+                    <ul class="pages">
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                    </ul>
+                    <!--// .pages -->
+                    <div class="view-all">
+                        <a href="#">Смотреть все</a>
+                    </div>
+                </div>
+                <!--// .pager -->
+                <h1>Фотоотчет</h1>
+                <!-- .foto-list -->
+                <ul class="foto-list">
+                    <li>
+                        <a href="#"><img src="/static/i/foto1.jpg" alt="" width="198" height="124"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="/static/i/foto2.jpg" alt="" width="198" height="124"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="/static/i/foto3.jpg" alt="" width="198" height="124"></a>
+                    </li>
+                </ul>
+                <!--// .foto-list -->
+            </section>
+            <!--// .photoreport -->
+            <!-- .txt-block -->
+            <section class="txt-block box">
+                <h1>История</h1>
+
+                <p>Этапы развития экономических и организационных наук в ИМТУ-МВТУ-МГТУ им. Н.Э.Баумана. Факультет Инженерный
+                    бизнес и менеджмент (ИБМ) Создан в МГТУ им Н.Э.Баумана в 1993 году. Первый выпуск состоялся в 1998 г.</p>
+
+                <p>Уважаемые абитуриенты, родители и все сопричастные и сопереживающие! 20 июня В МГТУ им Баумана (как и в
+                    подавляющем большинстве российских ВУЗов) открылись двери приемной комиссии! Ждем Вас по будням с 10.00 до
+                    17.00 и по субботам с 10.00 до 14.00. Для Вашего удобства работает портал Абитуриент, на котором вы сможете
+                    найти ответы почти на все вопросы связанные с поступлением, а также пройти предварительную регистрацию для
+                    экономии времени.</p>
+
+                <div class="more"><a href="#">Подробнее</a></div>
+            </section>
+            <!--// .txt-block -->
+        </div>
+        <!--// .content -->
+        <!-- .sidebar -->
+        <div class="sidebar">
+            {% include 'left_side.html' %}
+        </div>
+        <!--// .sidebar -->
+        <div class="clearing"></div>
+        </div>
+        <!--// .main -->
+        <div class="empty"></div>
+        </div>
+        <!--// .root -->
+        <!-- footer -->
+        <footer>
+            <!-- .f-menu -->
+            <nav class="f-menu">
+                <ul>
+                    <li><a href="#">{% trans 'Главная' %}</a></li>
+                    <li><a href="#">{% trans 'События' %}</a></li>
+                    <li><a href="#">{% trans 'Учеба' %}</a></li>
+                    <li><a href="#">{% trans 'Научно-исследовательская работа' %}</a></li>
+                    <li><a href="#">{% trans 'Международная деятельность' %}</a></li>
+                    <li><a href="#">{% trans 'Контакты' %}</a></li>
+                </ul>
+            </nav>
+            <!--// .f-menu -->
+            <!-- .footer-in -->
+            <div class="footer-in">
+                <!-- .f-social -->
+                <ul class="f-social">
+                    <li class="tw"><a href="#" title="Twitter"></a></li>
+                    <li class="fb"><a href="#" title="Facebook"></a></li>
+                    <li class="vk"><a href="#" title="ВКонтакте"></a></li>
+                </ul>
+                <!--// .f-social -->
+                <!-- .f-nav -->
+                <nav class="f-nav">
+                    <ul>
+                        <li><a href="#">{% trans 'Сайт МГТУ' %}</a></li>
+                        <li><a href="#">{% trans 'Карта сайта' %}</a></li>
+                        <li><a href="#">{% trans 'Поиск' %}</a></li>
+                        <li><a href="#">{% trans 'Контакты' %}</a></li>
+                    </ul>
+                </nav>
+                <!--// .f-nav -->
+                <!-- .designed -->
+                <ul class="designed">
+                    <li>Оформлено и разработано отделом</li>
+                    <li>Поддержки Интернет-ресурсов УИП МГТУ им. Н.Э.Баумана</li>
+                </ul>
+                <!--// .designed -->
+                <!-- .f-contacts -->
+                <ul class="f-contacts">
+                    <li>105005, Москва, 2-я Бауманская ул., д. 5, стр. 1</li>
+                    <li>Телефон: (499) 263-63-91</li>
+                    <li>Факс: (499) 267-48-44</li>
+                    <li>e-mail: <a href="#">bauman@bmstu.ru</a></li>
+                </ul>
+                <!--// .f-contacts -->
+            </div>
+            <!--// .footer-in -->
+        </footer>
+        <!--// footer -->
+        
+        <form method="POST" action='/i18n/setlang/' id = 'set_lang_ru_form'>
+            {% csrf_token %}
+            <input type = 'hidden' name="language" value="ru" />
+        </form>
+        <form method="POST" action='/i18n/setlang/' id = 'set_lang_en_form'>
+            {% csrf_token %}
+            <input type = 'hidden' name="language" value="en" />
+        </form>
+        
+        
+    </body>
+
+    <script>
+        $('#set_lang_ru').click(function(){
+            $('#set_lang_ru_form').submit();
+        });
+        $('#set_lang_en').click(function(){
+            $('#set_lang_en_form').submit();
+        });
+    </script>
+
+    {% comment %}
+                    <form method="POST" action='/i18n/setlang/'>
+                        {% csrf_token %}
+                        <button type = 'submit' name="language" value="zh-cn" class='lang'><img src="/static/images/ch.png" alt="Chine" /> Ch</button>
+                        <br />
+                        <button type = 'submit' name="language" value="en" class='lang'><img src="/static/images/us.png" alt="USA" /> Eng</button>
+                        <br />
+                        <button type = 'submit' name="language" value="ru" class='lang'><img src="/static/images/ru.png" alt="Russian" />Рус</button>
+                    </form>
+               
+                <ul>
+                    <li>
+                        <a href="/">{% trans 'Главная' %}</a>
+                    </li>
+                    <li>
+                        <a href="/about/">{% trans 'О компании' %}</a>
+                    </li>
+                    <li>
+                        <a href="/services/">{% trans 'Услуги' %}</a>
+                    </li>
+                    <li>
+                        <a href="/contacts/">{% trans 'Контакты' %}</a>
+                    </li>
+                    <li>
+                        <a href="/order/">{% trans 'Заказать сейчас' %}</a>
+                    </li>
+                </ul>
+            </div><!-- main_menu -->
+            
+            
+            {% block content %}
+            {% endblock %}
+          
+    {% endcomment %}
+</html>
