@@ -39,13 +39,9 @@ def page(request, page_name):
 def home(request):
     c = get_common_context(request)
     c['request_url'] = 'home'
-    #c['content'] = Page.get('home', c['lang'])['content']
+    c['home_top']     = Page.get('home_top',     c['lang'])['content']
+    c['home_history'] = Page.get('home_history', c['lang'])['content']
     return render_to_response('home.html', c, context_instance=RequestContext(request))
-
-def about(request):
-    c = get_common_context(request)
-    c['content'] = Page.get('about', c['lang'])['content']
-    return render_to_response('about.html', c, context_instance=RequestContext(request))
 
 def services(request):
     c = get_common_context(request)

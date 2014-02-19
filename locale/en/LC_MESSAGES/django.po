@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-19 20:45+0400\n"
+"POT-Creation-Date: 2014-02-19 21:17+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -49,52 +49,91 @@ msgstr "Engineering Business and Management"
 msgid "Московский Государственный технический университет им. Н.Э. Баумана"
 msgstr "Bauman Moscow State Technical University"
 
-#: templates/base.html:47 templates/base.html.py:328
+#: templates/base.html:47 templates/base.html.py:323
 msgid "Сайт МГТУ"
-msgstr ""
+msgstr "BMSTU"
 
-#: templates/base.html:48 templates/base.html.py:329
+#: templates/base.html:48 templates/base.html.py:324
 msgid "Карта сайта"
-msgstr ""
+msgstr "Site map"
 
-#: templates/base.html:49 templates/base.html.py:330
+#: templates/base.html:49 templates/base.html.py:325
 msgid "Поиск"
-msgstr ""
+msgstr "Search"
 
-#: templates/base.html:50 templates/base.html.py:312 templates/base.html:331
+#: templates/base.html:50 templates/base.html.py:307 templates/base.html:326
 #: templates/top_menu.html:21 templates/old/base.html:91
 msgid "Контакты"
-msgstr ""
+msgstr "Contacts"
 
-#: templates/base.html:307 templates/top_menu.html:4
+#: templates/base.html:302 templates/top_menu.html:4
 #: templates/old/base.html:82
 msgid "Главная"
 msgstr "Main"
 
-#: templates/base.html:308 templates/top_menu.html:5
+#: templates/base.html:303 templates/top_menu.html:5
 msgid "События"
 msgstr "Events"
 
-#: templates/base.html:309 templates/top_menu.html:12
+#: templates/base.html:304 templates/top_menu.html:7
 msgid "Учеба"
 msgstr "Study"
 
-#: templates/base.html:310 templates/top_menu.html:13
+#: templates/base.html:305 templates/top_menu.html:14
 msgid "Научно-исследовательская работа"
 msgstr "Research work"
 
-#: templates/base.html:311 templates/top_menu.html:20
+#: templates/base.html:306 templates/top_menu.html:20
 msgid "Международная деятельность"
 msgstr "International cooperation"
 
-#: templates/old/base.html:85
-msgid "О компании"
-msgstr ""
+#: templates/left_side.html:8
+msgid "О кафедре"
+msgstr "About Department"
 
-#: templates/old/base.html:88
-msgid "Услуги"
-msgstr ""
+#: templates/left_side.html:9
+msgid "Образовательные программы"
+msgstr "Study programs"
 
-#: templates/old/base.html:94
-msgid "Заказать сейчас"
-msgstr ""
+#: templates/left_side.html:11
+msgid "Бакалавриат"
+msgstr "Bachelor programs"
+
+#: templates/left_side.html:12
+msgid "Магистратура"
+msgstr "Master programs"
+
+#: templates/left_side.html:13
+msgid "Аспирантура"
+msgstr "Ph.D. programs"
+
+#: templates/left_side.html:16 templates/left_side.html.py:53
+msgid "Сотрудники"
+msgstr "Academic staff"
+
+#: templates/left_side.html:17
+msgid "Партнеры"
+msgstr "Partners"
+
+#: templates/left_side.html:18
+msgid "Выпускники"
+msgstr "Graduates"
+
+#: templates/top_menu.html:9
+msgid "Для поступающих"
+msgstr "Information for entrants"
+
+#: templates/top_menu.html:10
+msgid "Для студентов"
+msgstr "Information for students"
+
+#: templates/top_menu.html:16
+#, fuzzy
+msgid "Научно-исследовательские направления"
+msgstr "Research work"
+
+#: templates/top_menu.html:17
+#, fuzzy
+msgid "Научно-исследовательские группы"
+msgstr "Research work"
+

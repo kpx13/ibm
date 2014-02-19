@@ -1,2 +1,2 @@
-django-admin.py compilemessages -l en
 django-admin.py makemessages -l en
+django-admin.py compilemessages -l en

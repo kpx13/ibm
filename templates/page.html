@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ p.title }}{% endblock %}
+
+{% block content %}
+    <!-- .breadcrumbs -->
+    <ul class="breadcrumbs">
+        <li><a href="/">Главная</a></li>
+        <li><span class="divider">&gt;</span>{{ p.title }}</li>
+    </ul>
+    <!--// .breadcrumbs -->
+    
+    <div class="headline">
+        <h1>{{ p.title }}</h1>
+    </div>
+    
+    <!-- .txt-block -->
+    <div class="txt-block">
+        {{ p.content|safe }}
+    </div>
+    <!--// .txt-block -->
+{% endblock %}

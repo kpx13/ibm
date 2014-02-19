@@ -5,17 +5,17 @@
     <!-- .side-nav-in -->
     <nav class="side-nav-in">
         <ul>
-            <li><a href="#">О кафедре</a></li>
-            <li><a href="#">Образовательные программы</a>
+            <li {% if 'about' in request_url %} class='active' {% endif %}><a href="/about/">{% trans 'О кафедре' %}</a></li>
+            <li><a href="#">{% trans 'Образовательные программы' %}</a>
                 <ul>
-                    <li><a href="#">Бакалавриат</a></li>
-                    <li><a href="#">Магистратура</a></li>
-                    <li><a href="#">Аспирантура</a></li>
+                    <li><a href="/bachelor/">{% trans 'Бакалавриат' %}</a></li>
+                    <li><a href="/master/">{% trans 'Магистратура' %}</a></li>
+                    <li><a href="/phd/">{% trans 'Аспирантура' %}</a></li>
                 </ul>
             </li>
-            <li><a href="#">Сотрудники</a></li>
-            <li><a href="#">Партнеры</a></li>
-            <li><a href="#">Выпускники</a></li>
+            <li {% if 'staff' in request_url %} class='active' {% endif %}><a href="/staff/">{% trans 'Сотрудники' %}</a></li>
+            <li {% if 'partners' in request_url %} class='active' {% endif %}><a href="/partners/">{% trans 'Партнеры' %}</a></li>
+            <li {% if 'graduates' in request_url %} class='active' {% endif %}><a href="/graduates/">{% trans 'Выпускники' %}</a></li>
         </ul>
     </nav>
     <!--// .side-nav-in -->
@@ -50,7 +50,7 @@
 <!--// .side-partners -->
 <!-- .side-teachers -->
 <div class="side-teachers with-separator">
-    <div class="caption">Преподаватели</div>
+    <div class="caption">{% trans 'Сотрудники' %}</div>
     <div class="foto">
         <a href="#"><img src="/static/i/teachers-pic1.jpg" alt="" width="115" height="127"></a>
     </div>

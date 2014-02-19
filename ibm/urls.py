@@ -21,7 +21,6 @@ urlpatterns = patterns('',
     url(r'^i18n/', include('django.conf.urls.i18n')),
 
     url(r'^$', views.home),
-    url(r'^about/$', views.about),
     url(r'^services/$', views.services),
     url(r'^(?P<page_name>[\w-]+)/$' , views.page),
     
