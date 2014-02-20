@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load thumbnail %}
+
+{% block title %}Галерея{% endblock %}
+
+
+{% block head %}
+    <link rel="stylesheet" href="/static/css/colorbox.css"/>
+    <script type="text/javascript" src="/static/js/jquery.colorbox-min.js"></script>
+{% endblock %}
+
+{% block content %}
+
+    <!-- .breadcrumbs -->
+    <ul class="breadcrumbs">
+        <li><a href="/">Главная</a></li>
+        <li><span class="divider">&gt;</span>Галерея</li>
+    </ul>
+    <!--// .breadcrumbs -->
+    
+    <div class="headline">
+        <h1>Галерея</h1>
+    </div>
+    
+    <!-- .txt-block -->
+    <div class="txt-block">
+        <div class="gallery">
+        {% for p in gallery %}
+            {% thumbnail p.image "x124" as im %}
+                <a class="gallery__item" href="/media/{{ p.image }}" title="">
+                    <img src="{{ im.url }}" />
+                </a>
+            {% endthumbnail %}
+        {% endfor %}
+        </div>  
+    </div>
+    <!--// .txt-block -->
+
+    
+{% endblock %}

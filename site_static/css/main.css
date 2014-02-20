@@ -341,10 +341,12 @@ blockquote {
 
 .news-block.box {
     padding-top: 30px;
+    padding-bottom: 0px;
 }
 
 .news-block .calendar {
     position: relative;
+    margin-top: -30px;
 }
 
 .news-block .calendar .next,
@@ -440,9 +442,10 @@ blockquote {
 
 .news-list li {
     display: inline-block;
+    vertical-align: top !important;
     list-style: none;
     margin: 0 24px 0 0;
-    padding: 0 0 49px;
+    padding: 0 0 29px;
     width: 198px;
 }
 
@@ -540,6 +543,7 @@ blockquote {
     overflow: hidden;
     padding: 12px 0 16px;
     position: relative;
+    
 }
 
 .news .calendar .next,
@@ -1001,11 +1005,14 @@ footer a:hover {
 .f-menu ul {
     margin: 0 auto;
     width: 1000px;
+    white-space: nowrap;
+    font-size: 0;
 }
 
 .f-menu li {
     border-left: 1px solid #625f6e;
-    float: left;
+    display: inline-block;
+    font-size: 12px;
 }
 
 .f-menu li:first-child {
@@ -1105,22 +1112,22 @@ footer a:hover {
     display: none;
     overflow: hidden;
 }
-.menu li ul{
-   position: absolute;
-    top: 41px;
-    display: inline-block;
-    width: 100%;
-    z-index: 10;
-}
+
 .menu li{
     position: relative;
 }
+
 .menu li ul{
+    position: absolute;
+    top: 41px;
+    display: inline-block;
+    width: auto;
+    z-index: 10;
     background: #fbfafb;
-   display: none;
-overflow: hidden;
-    white-space: normal;
+    display: none;
+    overflow: hidden;
 }
+
 .menu li ul li{
     display: block;
       border-left: 0;
@@ -1153,5 +1160,9 @@ overflow: hidden;
     background-color: #6c6482;
 }
 
+.menu li ul.active{
+    display: block !important;
+}
 
-
+.gallery__item img {margin-bottom: 10px;}
+.gallery__item {text-decoration: none; background: none;}

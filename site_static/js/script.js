@@ -140,3 +140,10 @@ $(document).ready(function () {
     })
 })
 ;
+
+  $(document).ready(function () {
+        $(".gallery").each(function (index, v) {
+            $(this).find('.gallery__item').colorbox({rel: 'gallery' + index });
+        });
+        
+    });

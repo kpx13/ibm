@@ -7,10 +7,10 @@
         <ul>
             <li {% if 'about' in request_url %} class='active' {% endif %}><a href="/about/">{% trans 'О кафедре' %}</a></li>
             <li><a href="#">{% trans 'Образовательные программы' %}</a>
-                <ul>
-                    <li><a href="/bachelor/">{% trans 'Бакалавриат' %}</a></li>
-                    <li><a href="/master/">{% trans 'Магистратура' %}</a></li>
-                    <li><a href="/phd/">{% trans 'Аспирантура' %}</a></li>
+                <ul {% if 'sp_' in request_url %} style='display: block;' {% endif %}>
+                    <li {% if 'sp_bachelor' in request_url %} class='active' {% endif %}><a href="/sp_bachelor/">{% trans 'Бакалавриат' %}</a></li>
+                    <li {% if 'sp_master' in request_url %} class='active' {% endif %}><a href="/sp_master/">{% trans 'Магистратура' %}</a></li>
+                    <li {% if 'sp_phd' in request_url %} class='active' {% endif %}><a href="/sp_phd/">{% trans 'Аспирантура' %}</a></li>
                 </ul>
             </li>
             <li {% if 'staff' in request_url %} class='active' {% endif %}><a href="/staff/">{% trans 'Сотрудники' %}</a></li>
@@ -26,24 +26,14 @@
     <div class="caption">Вузы-партнеры</div>
     <!-- .partners-list -->
     <ul class="partners-list">
-        <li>
-            <a href="#">
-                <div class="img"><img src="/static/i/side-partners-pic1.png" alt="" width="120" height="53"></div>
-                <div class="title">УНИВЕРСИТЕТ ЛЕУФАНА, г. Люнебург (Германия)</div>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <div class="img"><img src="/static/i/side-partners-pic1.png" alt="" width="120" height="53"></div>
-                <div class="title">УНИВЕРСИТЕТ ЛЕУФАНА, г. Люнебург (Германия)</div>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <div class="img"><img src="/static/i/side-partners-pic1.png" alt="" width="120" height="53"></div>
-                <div class="title">УНИВЕРСИТЕТ ЛЕУФАНА, г. Люнебург (Германия)</div>
-            </a>
-        </li>
+        {% for p in base_partners %}
+            <li>
+                <a href="/partners/" target='_blank'>
+                    <div class="img"><img src="/media/{{ p.logo }}" alt="" width="120"></div>
+                    <div class="title">{{ p.name }}</div>
+                </a>
+            </li>
+        {% endfor %}
     </ul>
     <!--// .partners-list -->
 </div>
@@ -65,12 +55,9 @@
 <div class="side-links">
     <div class="caption">Ссылки</div>
     <ul>
-        <li><a href="#">Ссылка 1</a></li>
-        <li><a href="#">Раздел о разделе</a></li>
-        <li><a href="#">Раздел 2 о другом разделе</a></li>
-        <li><a href="#">Ссылка на все раздылы</a></li>
-        <li><a href="#">Еще одна ссылка</a></li>
-        <li><a href="#">Снова новый раздел</a></li>
+        {% for l in links %}
+            <li><a href="{{ l.url }}" target='_blank'>{{ l.name }}</a></li>
+        {% endfor %}
     </ul>
 </div>
 <!--// .side-links -->

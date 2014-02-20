@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load thumbnail %}
+
+{% block title %}Партнеры{% endblock %}
+
+
+{% block head %}
+    <link rel="stylesheet" href="/static/css/colorbox.css"/>
+    <script type="text/javascript" src="/static/js/jquery.colorbox-min.js"></script>
+{% endblock %}
+
+{% block content %}
+
+    <!-- .breadcrumbs -->
+    <ul class="breadcrumbs">
+        <li><a href="/">Главная</a></li>
+        <li><span class="divider">&gt;</span>Партнеры</li>
+    </ul>
+    <!--// .breadcrumbs -->
+    
+    <div class="headline">
+        <h1>Партнеры</h1>
+    </div>
+    
+        
+    <div class="side-partners with-separator">
+        <ul class="partners-list">
+            {% for p in partners %}
+                <li>
+                    <div class="img"><img src="/media/{{ p.logo }}" alt="{{ p.name }}" ></div>
+                    <div class="title"><b>{{ p.name }}</b></div>
+                    <div class="title"><a href="{{ p.url }}" target='_blank'>{{ p.url }}</a></div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    
+{% endblock %}

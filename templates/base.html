@@ -28,7 +28,7 @@
             <!-- .head-in -->
             <div class="head-in">
                 <div class="logo">
-                    <a href="#">
+                    <a href="/">
                         <img src="/static/i/logo.png" alt="" width="118" height="117">
                     </a>
                 </div>
@@ -44,10 +44,7 @@
                 <!-- .nav -->
                 <nav class="nav">
                     <ul>
-                        <li><a href="#">{% trans 'Сайт МГТУ' %}</a></li>
-                        <li><a href="#">{% trans 'Карта сайта' %}</a></li>
-                        <li><a href="#">{% trans 'Поиск' %}</a></li>
-                        <li><a href="#">{% trans 'Контакты' %}</a></li>
+                        {% include 'top_bottom_menu.html' %}
                     </ul>
                 </nav>
                 <!--// .nav -->
@@ -113,10 +110,7 @@
                 <!-- .f-nav -->
                 <nav class="f-nav">
                     <ul>
-                        <li><a href="#">{% trans 'Сайт МГТУ' %}</a></li>
-                        <li><a href="#">{% trans 'Карта сайта' %}</a></li>
-                        <li><a href="#">{% trans 'Поиск' %}</a></li>
-                        <li><a href="#">{% trans 'Контакты' %}</a></li>
+                        {% include 'top_bottom_menu.html' %}
                     </ul>
                 </nav>
                 <!--// .f-nav -->

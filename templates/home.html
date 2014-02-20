@@ -20,140 +20,29 @@
             <section class="news-block with-separator box">
                 <h1>Новости</h1>
                 <!-- .calendar -->
+                
                 <div class="calendar">
-                    <div class="prev" style="display:none;">&lt;</div>
-                    <div class="next">&gt;</div>
-                    <!-- .month -->
-                    <ul class="month">
-                        <li>Январь</li>
-                        <li class="active">Февраль</li>
-                        <li>Март</li>
-                        <li>Апрель</li>
-                        <li>Май</li>
-                        <li>Июнь</li>
-                        <li>Июль</li>
-                        <li>Август</li>
-                        <li>Сентябрь</li>
-                        <li>Октябрь</li>
-                        <li>Ноябрь</li>
-                        <li>Декабрь</li>
-                    </ul>
-                    <!--// .month -->
-                    <!-- .days -->
-                    <ul class="days">
-                        <li>1</li>
-                        <li>2</li>
-                        <li>3</li>
-                        <li>4</li>
-                        <li>5</li>
-                        <li>6</li>
-                        <li>7</li>
-                        <li>8</li>
-                        <li>9</li>
-                        <li>10</li>
-                        <li>11</li>
-                        <li>12</li>
-                        <li>13</li>
-                        <li>14</li>
-                        <li>15</li>
-                        <li>16</li>
-                        <li>17</li>
-                        <li>18</li>
-                        <li>19</li>
-                        <li>20</li>
-                        <li>21</li>
-                        <li>22</li>
-                        <li>23</li>
-                        <li>24</li>
-                        <li>25</li>
-                        <li>26</li>
-                        <li>27</li>
-                        <li>28</li>
-                        <li>29</li>
-                        <li>30</li>
-                        <li>31</li>
-                    </ul>
-                    <!--// .days -->
                     <!-- .news-list -->
                     <ul class="news-list">
-                        <li>
-                            <div class="img">
-                                <a href="#"><img src="/static/i/news-pic1.jpg"
-                                                alt="На нашем факультете Вы имеете уникальную возможность получить" width="198"
-                                                height="83"></a>
-                            </div>
-                            <div class="date">16 января 2014</div>
-                            <div class="title"><a href="#">На нашем факультете Вы имеете уникальную возможность получить</a>
-                            </div>
-                            <div class="txt">комбинированное образование: на первых годах обучения изучить основные технические
-                                дисциплины, а на старших курсах...
-                            </div>
-                        </li>
-                        <li>
-                            <div class="img">
-                                <a href="#"><img src="/static/i/news-pic2.jpg"
-                                                alt="На нашем факультете Вы имеете уникальную возможность получить" width="198"
-                                                height="83"></a>
-                            </div>
-                            <div class="date">16 января 2014</div>
-                            <div class="title"><a href="#">На нашем факультете Вы имеете уникальную возможность получить</a>
-                            </div>
-                            <div class="txt">комбинированное образование: на первых годах обучения изучить основные технические
-                                дисциплины, а на старших курсах...
-                            </div>
-                        </li>
-                        <li>
-                            <div class="img">
-                                <a href="#"><img src="/static/i/news-pic3.jpg"
-                                                alt="На нашем факультете Вы имеете уникальную возможность получить" width="198"
-                                                height="83"></a>
-                            </div>
-                            <div class="date">16 января 2014</div>
-                            <div class="title"><a href="#">На нашем факультете Вы имеете уникальную возможность получить</a>
-                            </div>
-                            <div class="txt">комбинированное образование: на первых годах обучения изучить основные технические
-                                дисциплины, а на старших курсах...
-                            </div>
-                        </li>
-                        <li>
-                            <div class="img">
-                                <a href="#"><img src="/static/i/news-pic1.jpg"
-                                                alt="На нашем факультете Вы имеете уникальную возможность получить" width="198"
-                                                height="83"></a>
-                            </div>
-                            <div class="date">16 января 2014</div>
-                            <div class="title"><a href="#">На нашем факультете Вы имеете уникальную возможность получить</a>
-                            </div>
-                            <div class="txt">комбинированное образование: на первых годах обучения изучить основные технические
-                                дисциплины, а на старших курсах...
-                            </div>
-                        </li>
-                        <li>
-                            <div class="img">
-                                <a href="#"><img src="/static/i/news-pic2.jpg"
-                                                alt="На нашем факультете Вы имеете уникальную возможность получить" width="198"
-                                                height="83"></a>
-                            </div>
-                            <div class="date">16 января 2014</div>
-                            <div class="title"><a href="#">На нашем факультете Вы имеете уникальную возможность получить</a>
-                            </div>
-                            <div class="txt">комбинированное образование: на первых годах обучения изучить основные технические
-                                дисциплины, а на старших курсах...
-                            </div>
-                        </li>
-                        <li>
-                            <div class="img">
-                                <a href="#"><img src="/static/i/news-pic3.jpg"
-                                                alt="На нашем факультете Вы имеете уникальную возможность получить" width="198"
-                                                height="83"></a>
-                            </div>
-                            <div class="date">16 января 2014</div>
-                            <div class="title"><a href="#">На нашем факультете Вы имеете уникальную возможность получить</a>
-                            </div>
-                            <div class="txt">комбинированное образование: на первых годах обучения изучить основные технические
-                                дисциплины, а на старших курсах...
-                            </div>
-                        </li>
+                        {% for l in recent_news %}
+                            <li>
+                                    <div class="img">
+                                    <a href="/news/{{ l.slug }}/">
+                                        <img src="/media/{{ l.image }}"
+                                                alt="{{ l.title }}" width="198">
+                                    </a>
+                                </div>
+                                
+                                <div class="date">{{ l.date|date:"d/m/Y" }}</div>
+                                <div class="title">
+                                    <a href="/news/{{ l.slug }}/">{{ l.title }}</a>
+                                </div>
+                                <div class="txt">
+                                    {{ l.content }}
+                                </div>
+                                
+                            </li>
+                        {% endfor %}
                     </ul>
                     <!--// .news-list -->
                 </div>
@@ -164,30 +53,19 @@
             <section class="photoreport with-separator box">
                 <!-- .pager -->
                 <div class="pager">
-                    <!-- .pages -->
-                    <ul class="pages">
-                        <li class="active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                    </ul>
-                    <!--// .pages -->
                     <div class="view-all">
-                        <a href="#">Смотреть все</a>
+                        <a href="/gallery/">Смотреть все</a>
                     </div>
                 </div>
                 <!--// .pager -->
                 <h1>Фотоотчет</h1>
                 <!-- .foto-list -->
                 <ul class="foto-list">
-                    <li>
-                        <a href="#"><img src="/static/i/foto1.jpg" alt="" width="198" height="124"></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="/static/i/foto2.jpg" alt="" width="198" height="124"></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="/static/i/foto3.jpg" alt="" width="198" height="124"></a>
-                    </li>
+                    {% for p in recent_photos %}
+                        <li>
+                            <a href="/gallery/"><img src="/media/{{ p.image }}" alt="" width="198" ></a>
+                        </li>
+                    {% endfor %}
                 </ul>
                 <!--// .foto-list -->
             </section>

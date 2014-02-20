@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block title %}Новости{% endblock %}
+
+{% block head %}
+{% endblock %}
+
+{% block content %}
+    <!-- .breadcrumbs -->
+    <ul class="breadcrumbs">
+        <li><a href="/">Главная</a></li>
+        <li><span class="divider">&gt;</span>Новости</li>
+    </ul>
+    <!--// .breadcrumbs -->
+    <!-- .news -->
+    <section class="news">
+        <h1>Новости</h1>
+        <!-- .calendar -->
+        <!--<div class="calendar">
+            <div class="prev" style="display:none;">&lt;</div>
+            <div class="next">&gt;</div>
+            <ul class="month">
+                <li><a href='/'>Январь</a></li>
+                <li class="active">Февраль</li>
+                <li>Март</li>
+                <li>Апрель</li>
+                <li>Май</li>
+                <li>Июнь</li>
+                <li>Июль</li>
+                <li>Август</li>
+                <li>Сентябрь</li>
+                <li>Октябрь</li>
+                <li>Ноябрь</li>
+                <li>Декабрь</li>
+            </ul>
+        </div>-->
+        <!--// .calendar -->
+        
+        <!-- .news-items -->
+        <ul class="news-items">
+            {% for l in items %}
+                <li>
+                    <div class="img">
+                        <a href='/news/{{ l.slug }}/'>
+                        <img src="/media/{{ l.image }}" alt="{{ l.title }}"></a>
+                    </div>
+                    <div class="title"><a href="/news/{{ l.slug }}/">{{ l.title }}</a></div>
+                    <div class="txt">{{ l.content }}</div>
+                    <div class="date">{{ l.date|date:"d/m/Y" }}</div>
+                </li>
+            {% endfor %}
+        </ul>
+        <!--// .news-items -->
+        
+        
+        {% if need_pagination %}
+        
+             <!-- .paginator -->
+            <div class="paginator">
+                <ul class="pages">
+                    {% for p in page_range %}
+                        <li {% if p == items.number %}class="active"{% endif %}>
+                            <a href="{{ get_request }}?page={{ p }}">{{ p }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+    <!--         <div class="all"><a href="#">Смотреть все</a></div> -->
+            </div>
+            <!--// .paginator -->
+        
+        {% endif %}
+            
+        
+        
+       
+    </section>
+    <!--// .news -->
+{% endblock %}

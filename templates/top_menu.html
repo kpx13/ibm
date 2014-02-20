@@ -1,22 +1,22 @@
 {% load i18n %}
 
 <ul>
-    <li><a href="#">{% trans 'Главная' %}</a></li>
-    <li><a href="#">{% trans 'События' %}</a></li>
+    <li><a href="/">{% trans 'Главная' %}</a></li>
+    <li><a href="/events/">{% trans 'События' %}</a></li>
     <li>
         <a href="#">{% trans 'Учеба' %}</a>
         <ul>
-            <li><a href="#">{% trans 'Для поступающих' %}</a></li>
-            <li><a href="#">{% trans 'Для студентов' %}</a></li>
+            <li><a href="/information-for-entrants/">{% trans 'Для поступающих' %}</a></li>
+            <li><a href="/information-for-students/">{% trans 'Для студентов' %}</a></li>
         </ul>
     </li>
     <li>
         <a href="#">{% trans 'Научно-исследовательская работа' %}</a>
         <ul>
-            <li><a href="#">{% trans 'Научно-исследовательские направления' %}</a></li>
-            <li><a href="#">{% trans 'Научно-исследовательские группы' %}</a></li>
+            <li><a href="/research-work/">{% trans 'Научно-исследовательские направления' %}</a></li>
+            <li><a href="/research-group/">{% trans 'Научно-исследовательские группы' %}</a></li>
         </ul>
     </li>
-    <li><a href="#">{% trans 'Международная деятельность' %}</a></li>
-    <li><a href="#">{% trans 'Контакты' %}</a></li>
+    <li><a href="/international-cooperation/">{% trans 'Международная деятельность' %}</a></li>
+    <li><a href="/contacts/">{% trans 'Контакты' %}</a></li>
 </ul>
