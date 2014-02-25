@@ -47,17 +47,9 @@ class CustomIndexDashboard(Dashboard):
                 models=(
                     'pages.models.Page',
                     'gallery.models.Photo',
-                ),
-            )
-        )
-        
-        
-        self.children.append(
-            modules.ModelList(
-                title = u'Заявки и Заказы',
-                models=(
-                    'order.models.Order',
-                    'feedback.models.Feedback',
+                    'links.models.Link',
+                    'news.models.Article',
+                    'partners.models.Partner',
                 ),
             )
         )

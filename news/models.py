@@ -25,8 +25,8 @@ class Article(models.Model):
         super(Article, self).save(*args, **kwargs)
         
     class Meta:
-        verbose_name = u'новость'
-        verbose_name_plural = u'новости'
+        verbose_name = u'событие'
+        verbose_name_plural = u'события'
         ordering=['-date']
     
     def __unicode__(self):
