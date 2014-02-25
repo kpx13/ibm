@@ -18,32 +18,3 @@ config_register(StringValue(
         help_text = u"Почта, куда будут приходить заявки.",
         default = 'annkpx@gmail.com'
     ))
-
-
-config_register(StringValue(
-                            MYAPP_GROUP,
-        'field_1', 
-        description = u'доставлен груз до пункта назначения',
-        default = '236'
-    ))
-
-config_register(StringValue(
-                            MYAPP_GROUP,
-        'field_2', 
-        description = u'довольных клиентов',
-        default = '569'
-    ))
-
-config_register(StringValue(
-                            MYAPP_GROUP,
-        'field_3', 
-        description = u'звонка в день',
-        default = '52'
-    ))
-
-config_register(StringValue(
-                            MYAPP_GROUP,
-        'field_4', 
-        description = u'процента закупок за рубежом',
-        default = '2,53'
-    ))

@@ -149,8 +149,8 @@ CKEDITOR_CONFIGS = {
                 ['Image', 'Table', 'HorizontalRule' ],
                 ['Maximize'],
             ],
-        'width': 660,
-        'height': 300,
+        'width': 1000,
+        'height': 400,
         'toolbarCanCollapse': True,
         'resize_enabled': True,
         'pasteFromWordRemoveFontStyles': True
