@@ -39,16 +39,13 @@
 </div>
 <!--// .side-partners -->
 <!-- .side-teachers -->
-<div class="side-teachers with-separator">
-    <div class="caption">{% trans 'Сотрудники' %}</div>
-    <div class="foto">
-        <a href="http://www.bmstu.ru/ps/~omelchenko/" target="_blank"><img src="/static/i/teachers-pic1.jpg" alt="" width="115" height="127"></a>
-    </div>
-    <div class="details">
-        <div class="name">Омельченко Ирина Николаевна</div>
-        <div class="post">Декан факультета</div>
-        <div class="more"><a href="http://www.bmstu.ru/ps/~omelchenko/" target="_blank">Подробнее</a></div>
-    </div>
+<div class="side-links">
+    <div class="caption">{% trans 'События' %}</div>
+    <ul>
+        {% for l in recent_news %}
+            <li><span class="date">{{ l.date|date:"d/m/Y" }}</span> <a href="/news/{{ l.slug }}">{{ l.title }}</a></li>
+        {% endfor %}
+    </ul>
 </div>
 <!--// .side-teachers -->
 <!-- .side-links -->
