@@ -2,8 +2,8 @@
 import os
 from os.path import abspath, join, dirname
 
-DEBUG = False
-TEMPLATE_DEBUG = False
+DEBUG = True
+TEMPLATE_DEBUG = True
 
 ADMINS = (
 )
@@ -18,6 +18,7 @@ DATETIME_FORMAT = '%d.%m.%Y'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+        'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'ibm',   # Or path to database file if using sqlite3.
         'USER': 'ibm',                      # Not used with sqlite3.
         'PASSWORD': 'ibm',                  # Not used with sqlite3.
@@ -92,22 +93,19 @@ INSTALLED_APPS = (
     'admin_tools',
     'admin_tools.theming',
     'admin_tools.menu',
-    'admin_tools.dashboard',    
+    'admin_tools.dashboard',
     'django.contrib.auth',
     'django.contrib.sites',
     'django.contrib.admin',
-    'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
-    'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ckeditor',
-    'django.contrib.admin',
     'django.contrib.admindocs',
     'sorl.thumbnail',
     'livesettings',
-    
+
     'pages',
     'gallery',
     'news',
@@ -135,6 +133,7 @@ LOGGING = {
 }
 
 FILE_UPLOAD_MAX_MEMORY_SIZE = 7864320
+CKEDITOR_IMAGE_BACKEND = 'Pillow'
 CKEDITOR_CONFIGS = {
     'default': {
         'toolbar':
@@ -153,7 +152,8 @@ CKEDITOR_CONFIGS = {
         'height': 400,
         'toolbarCanCollapse': True,
         'resize_enabled': True,
-        'pasteFromWordRemoveFontStyles': True
+        'pasteFromWordRemoveFontStyles': True,
+        'visible_filename':True
     }
 }
 
